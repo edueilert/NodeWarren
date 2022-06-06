@@ -1,4 +1,4 @@
-class UserController {
+class AllUserController {
 
     handle(req, res, next) {
         res.send({
@@ -9,9 +9,14 @@ class UserController {
             celphone:req.body.celphone,
             nascimento:req.body.nascimento,
             whatsapp:req.body.whatsapp,
-            emailsms:req.body.emailsms
+            emailsms:req.body.emailsms,
+            pais:req.body.pais,
+            cidade:req.body.cidade,
+            cep:req.body.cep,
+            endereco:req.body.endereco,
+            numero:req.body.numero
         });
     }
 }
 
-module.exports = new UserController();
+module.exports = new AllUserController();
