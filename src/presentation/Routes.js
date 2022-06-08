@@ -3,8 +3,8 @@ const { Router }  = require("express");
 const router = Router()
 
 const AllUserController = require("./controllers/AllUserController")
-const UserController = require("./controllers/UserController");
-const User2Controller = require("./controllers/User2Controller");
+const UserController = require("./controllers/UserController")
+const User2Controller = require("./controllers/User2Controller")
 
 router.get("/", AllUserController.handle);
 

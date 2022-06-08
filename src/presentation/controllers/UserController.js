@@ -1,7 +1,11 @@
+const UserService = require("../../domain/user/services/UserService")
 class UserController {
 
     handle(req, res, next) {
-        res.send({
+        const {body} = req
+        UserService.createUser(body)
+
+            res.send({
             name:req.body.name, 
             email:req.body.email,
             emailC:req.body.emailC, 
