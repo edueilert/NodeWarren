@@ -6,7 +6,7 @@ const AllUserController = require("./controllers/AllUserController")
 const UserController = require("./controllers/UserController")
 const User2Controller = require("./controllers/User2Controller")
 
-router.get("/", AllUserController.handle);
+router.post("/", AllUserController.handle);
 
 router.get("/User", UserController.handle);
 
