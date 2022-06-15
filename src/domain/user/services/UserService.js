@@ -44,12 +44,31 @@ class UserService {
     if (cpf == "" || cpf.length < 14 && !ValidadorCPF(cpf.replace(/[^0-9]/g, ''))) {
       console.log("O CPF não está válido")
     }
-    if(celphone == "" || celphone.length < 11){
+    if(celphone == "" || celphone.length < 11 || celphone.length > 11) {
       console.log("Digite um número válido")
     }
-   
+    if(nascimento == "" || nascimento.length < 10 || nascimento.length > 10) {
+      console.log("Digite uma data válida")
+    }
+    if(whatsapp == "" && emailsms == "") {
+      console.log("Selecione pelo menos um campo")
+    }
+    if(pais == "") {
+      console.log("Digite um país válido")
+    }
+    if(cidade == "") {
+      console.log("Digite uma cidade válida")
+    }
+    if(cep == "" || cep.length < 8 || cep.length > 8) {
+      console.log("Digite um CEP válido")
+    }
+    if(endereco == "") {
+      console.log("Digite um endereço válido")
+    }
+    if(numero == "") {
+      console.log("Digite um número válido")
+    }
   }
-
 }
 
 module.exports =  new UserService() 
