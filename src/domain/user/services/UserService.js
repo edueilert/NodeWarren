@@ -2,7 +2,8 @@ const User = require("../mocks/UserMock")
 
 class UserService {
   createUser (body) {
-    const {name, email, emailC, cpf, celphone, nascimento, whatsapp, emailsms, pais, cidade, cep, endereco, numero} = body;
+    const {name, email, emailC, cpf, nascimento, celphone, whatsapp, emailsms, pais, cidade, cep, endereco, numero} = body
+    
     if (name == "" || name.length < 3) {
       console.log("O nome está inválido")
     }
@@ -10,7 +11,7 @@ class UserService {
     if (email == "" || !emailRegex.test(email)) {
       console.log("O e-mail está inválido")
     }
-    if (email !== emailC || emailC == "") {
+    if (emailC == "" || email !== emailC) {
       console.log("O e-mail de confirmação deve ser igual ao mencionado anteriormente")
     }
 
